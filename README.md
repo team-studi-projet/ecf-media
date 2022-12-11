@@ -1,6 +1,7 @@
 # ecfblancmedia
 Ecf blanc Mediatheque
 ## Installation
+Faites un git clone sur votre bureau ou dans le répertoire où vous voulez stocké le projet.
 ***
 Pour installer le projet sur votre machine, allez ici et ensuite copiez ceci dans le fichier :
 >"C:\xampp\apache\conf\extra\httpd-vhosts.conf"
