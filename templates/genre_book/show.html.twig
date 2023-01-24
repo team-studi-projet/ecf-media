@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GenreBook{% endblock %}
+
+{% block body %}
+    <h1>GenreBook</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ genre_book.id }}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>{{ genre_book.genre }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_genre_book_index') }}">back to list</a>
+
+    <a href="{{ path('app_genre_book_edit', {'id': genre_book.id}) }}">edit</a>
+
+    {{ include('genre_book/_delete_form.html.twig') }}
+{% endblock %}
