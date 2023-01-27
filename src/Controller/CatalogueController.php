@@ -12,7 +12,7 @@ class CatalogueController extends AbstractController
     public function book(): Response
     {
         return $this->render('catalogue/index.html.twig', [
-            'controller_name' => 'CatalogueController',
+            'books' => '',
         ]);
     }
 }
