@@ -11,6 +11,7 @@
                 <th>Id</th>
                 <th>Title</th>
                 <th>ParutionDate</th>
+                <th>Genre</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -20,6 +21,7 @@
                 <td>{{ book.id }}</td>
                 <td>{{ book.title }}</td>
                 <td>{{ book.parutionDate ? book.parutionDate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ book.genre}}</td>
                 <td>
                     <a href="{{ path('app_book_show', {'id': book.id}) }}">show</a>
                     <a href="{{ path('app_book_edit', {'id': book.id}) }}">edit</a>
