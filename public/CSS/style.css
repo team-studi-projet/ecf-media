@@ -6,8 +6,8 @@ body
     background-repeat: repeat;
     width: 100%;
     margin: auto;
-    background-color:antiquewhite;
-
+    background-color:#faebd7;
+    font-family:'cardo';
     
 }
 
@@ -16,4 +16,22 @@ nav
 
     background-color:  #d4783f;
 
+}
+
+h1{
+    font-family:'cardo';
+        
+    
+}
+
+
+input {
+    box-sizing: border-box;
+    position: absolute;
+    width: 500px;
+    height: 72px;
+    left: 500px;
+    top: 300px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #FFFFFF;
+    border: 2px solid rgba(128, 0, 0, 0.34);
 }
