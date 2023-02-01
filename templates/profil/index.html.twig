@@ -1,31 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscription{% endblock %}
+{% block title %}Profil{% endblock %}
 
 {% block body %}
-    <h1>Inscription</h1>
-
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.firstName, {
+    {{ form_start(profilForm) }}
+        {{ form_row(profilForm.firstName, {
             label: 'Prénom'
         }) }}
-        {{ form_row(registrationForm.lastName, {
+        {{ form_row(profilForm.lastName, {
             label: 'Nom'
         }) }}
         {{ form_row(registrationForm.birthDay, {
             label: 'Date de Naissance'
         }) }}
-        {{ form_row(registrationForm.adressPost, {
+        {{ form_row(profilForm.adressPost, {
             label: 'Adresse Postale'
         }) }}
-        {{ form_row(registrationForm.email, {
+        {{ form_row(profilForm.email, {
             label: 'email'
         }) }}
-        {{ form_row(registrationForm.plainPassword, {
+        {{ form_row(profilForm.plainPassword, {
             label: 'Mot de passe'
         }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
 
         <button type="submit" class="btn">Valider</button>
-    {{ form_end(registrationForm) }}
+        <button type="cancel" class="btn">Annuler</button>
+    {{ form_end(profilForm) }}
+
 {% endblock %}
