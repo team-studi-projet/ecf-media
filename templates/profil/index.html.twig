@@ -3,28 +3,28 @@
 {% block title %}Profil{% endblock %}
 
 {% block body %}
-    {{ form_start(profilForm) }}
-        {{ form_row(profilForm.firstName, {
+    {{ form_start(ProfilForm) }}
+        {{ form_row(ProfilForm.firstName, {
             label: 'Prénom'
         }) }}
-        {{ form_row(profilForm.lastName, {
+        {{ form_row(ProfilForm.lastName, {
             label: 'Nom'
         }) }}
-        {{ form_row(registrationForm.birthDay, {
+        {{ form_row(ProfilForm.birthDay, {
             label: 'Date de Naissance'
         }) }}
-        {{ form_row(profilForm.adressPost, {
+        {{ form_row(ProfilForm.adressPost, {
             label: 'Adresse Postale'
         }) }}
-        {{ form_row(profilForm.email, {
+        {{ form_row(ProfilForm.email, {
             label: 'email'
         }) }}
-        {{ form_row(profilForm.plainPassword, {
+        {{ form_row(ProfilForm.plainPassword, {
             label: 'Mot de passe'
         }) }}
 
         <button type="submit" class="btn">Valider</button>
         <button type="cancel" class="btn">Annuler</button>
-    {{ form_end(profilForm) }}
+    {{ form_end(ProfilForm) }}
 
 {% endblock %}

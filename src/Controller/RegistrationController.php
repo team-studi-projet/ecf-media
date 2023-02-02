@@ -5,12 +5,13 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\RegistrationFormType;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class RegistrationController extends AbstractController
 {
@@ -40,5 +41,21 @@ class RegistrationController extends AbstractController
         return $this->render('registration/register.html.twig', [
             'registrationForm' => $form->createView(),
         ]);
+    }
+    
+    #[Route('/login',name:'registration.login')]
+    public function login(AuthenticationUtils $authenticationUtils): Response
+    {
+
+        return $this->render('registration/login.html.twig', [
+            'lastName' => $authenticationUtils->getLastUsername(),
+          //  'error' => $authenticationUtils->getLastAuthenticationError()
+        ]);
+    }
+
+    #[Route('/logout', name:'registration.logout')]
+    public function logout()
+    {
+    
     }
 }
