@@ -1,13 +1,17 @@
+html{
+height: 100%;
 
-body
+}
 
-{
+body{
     background-image: url("images/background.png") !important;
     background-repeat: repeat;
     width: 100%;
     margin: auto;
     background-color:#faebd7;
     font-family:'cardo';
+    min-height: 90%;
+    position: relative;
     
 }
 
@@ -27,11 +31,16 @@ h1{
 
 input {
     box-sizing: border-box;
-    position: absolute;
-    width: 500px;
-    height: 72px;
-    left: 500px;
-    top: 300px;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #FFFFFF;
     border: 2px solid rgba(128, 0, 0, 0.34);
+}
+
+.footer-page{
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    
+
+
 }
